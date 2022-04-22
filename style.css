@@ -1,36 +1,61 @@
-  #red {
-    background-color: red;
-  }
-  
-  #green {
-    background-color: green;
-  }
+#red {
+  background-color: Crimson;
+}
 
-  #blue {
-    background-color: blue;
-  }
+#green {
+  background-color: SpringGreen;
+}
 
-  #black {
-    background-color: black;
-  }
+#blue {
+  background-color: DeepSkyBlue;
+}
 
-  .color {
-    border: 1px solid black;
-    width: 55px;
-    height: 55px;
-    display: inline-block;
-  }
+#black {
+  background-color: rgb(0, 0, 0);
+}
 
-  .pixel {
-    border: 1px solid black;
-    width: 40px;
-    height: 40px;
-    padding: 0px;
-    display: inline-block;
-    background-color: white;
-  }
+#white {
+  background-color: white;
+}
 
-  #pixel-board {
-    width: 230px;
-    line-height: 0px;
-  }
+#clear-board {
+  width: 70px;
+  height: 25px;
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px;
+  font-family: monospace;
+  background-color: rgb(223, 223, 223);
+}
+
+#clear-board:hover {
+  color: blue;
+}
+
+#clear-board:active {
+  border: 2px solid silver;
+}
+
+.color {
+  border: 1px solid black;
+  width: 55px;
+  height: 55px;
+  display: inline-block;
+}
+
+.pixel {
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  display: inline-block;
+  background-color: white;
+  margin: 4px;
+}
+
+#pixel-board {
+  width: 250px;
+  line-height: 0;
+}
