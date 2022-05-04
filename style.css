@@ -52,10 +52,14 @@
   padding: 0px;
   display: inline-block;
   background-color: white;
-  margin: 4px;
+  /* margin: 4px; */
 }
 
 #pixel-board {
-  width: 250px;
+  width: 210px;
   line-height: 0;
+}
+
+#board-size {
+  width: 30px;
 }

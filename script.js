@@ -1,14 +1,42 @@
 const pixelBoard = document.getElementById('pixel-board');
 const colorPalette = document.querySelectorAll('#color-palette div');
 const buttonClear = document.getElementById('clear-board');
+const btnVqv = document.getElementById('generate-board');
 
-for (let index = 1; index <= 25; index += 1) {
-  const pixels = document.createElement('div');
-  pixels.className = 'pixel';
-  pixelBoard.appendChild(pixels);
+function setTheColor() {
+  const selected = document.querySelector('.selected');
+  // eslint-disable-next-line no-restricted-globals
+  event.target.id = selected.id;
 }
 
-const pixels = document.querySelectorAll('.pixel');
+function initialBoard() {
+  for (let index = 1; index <= 25; index += 1) {
+    const pixels = document.createElement('div');
+    pixels.className = 'pixel';
+    pixelBoard.appendChild(pixels);
+    pixels.addEventListener('click', setTheColor);
+  }
+}
+
+initialBoard();
+
+btnVqv.addEventListener('click', () => {
+  pixelBoard.innerText = '';
+  const input = document.getElementById('board-size');
+  if (input.value < 1) {
+    initialBoard();
+    return alert('Board inválido!');
+  }
+  pixelBoard.style.width = `${42 * input.value}px`;
+  for (let index = 0; index < input.value * input.value; index += 1) {
+    const pixels = document.createElement('div');
+    pixels.className = 'pixel';
+    pixels.addEventListener('click', setTheColor);
+    pixelBoard.appendChild(pixels);
+  }
+});
+
+// const pixels = document.querySelectorAll('.pixel');
 
 function selectedColor() {
   for (let index = 0; index < colorPalette.length; index += 1) {
@@ -22,17 +50,6 @@ function selectedColor() {
 for (let index = 0; index < colorPalette.length; index += 1) {
   const element = colorPalette[index];
   element.addEventListener('click', selectedColor);
-}
-
-function setTheColor() {
-  const selected = document.querySelector('.selected');
-  // eslint-disable-next-line no-restricted-globals
-  event.target.id = selected.id;
-}
-
-for (let index = 0; index < pixels.length; index += 1) {
-  const element = pixels[index];
-  element.addEventListener('click', setTheColor);
 }
 
 function clearBoard() {
