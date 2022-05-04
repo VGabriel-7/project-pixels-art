@@ -43,7 +43,7 @@ function limitBoard() {
 btnVqv.addEventListener('click', () => {
   console.log(input.value);
   pixelBoard.innerText = '';
-  if (input.value == '') {
+  if (input.value === '') {
     initialBoard();
     return alert('Board inválido!');
   }
