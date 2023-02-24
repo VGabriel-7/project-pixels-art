@@ -1,20 +1,37 @@
-#clear-board {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+header h1 {
+  margin: 10px 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}
+
+.btn {
   width: 70px;
   height: 25px;
-  margin-left: 15px;
+  margin: 15px;
   margin-top: 10px;
   margin-bottom: 15px;
   border-radius: 5px;
   border: 1px;
   font-family: monospace;
   background-color: rgb(223, 223, 223);
+  opacity: 0.5;
+  cursor: pointer;
 }
 
-#clear-board:hover {
-  color: blue;
+.btn:hover {
+  opacity: 1;
 }
 
-#clear-board:active {
+.btn:active {
   border: 2px solid silver;
 }
 
@@ -38,8 +55,9 @@
 #pixel-board {
   width: 210px;
   line-height: 0;
+  margin-left: 15px;
 }
 
 #board-size {
-  width: 30px;
+  width: 35px;
 }
